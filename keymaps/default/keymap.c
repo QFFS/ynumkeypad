@@ -35,3 +35,22 @@ bool encoder_update_user(uint8_t index, bool clockwise)
     }
     return true;
 }
+
+#ifdef OLED_ENABLE
+bool oled_task_user(void) {
+    oled_write_P(PSTR("Layer: "), false);
+    switch (get_highest_layer(layer_state)) {
+        case _BASE:
+            oled_write_P(PSTR("BASE\n"), false);
+            break;
+        case _FN:
+            oled_write_P(PSTR("FN\n"), false);
+            break;
+        default:
+            oled_write_ln_P(PSTR("Undefined"), false);
+    }
+    led_t led_state = host_keyboard_led_state();
+    oled_write_P(led_state.num_lock ? PSTR("NUM LOCK") : PSTR("        "), false);
+    return false;
+}
+#endif
