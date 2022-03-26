@@ -2,7 +2,7 @@
 
 ![ynumkeypad](https://s3.bmp.ovh/imgs/2022/01/9fc75b675100e1dd.jpg)
 
-*A short description of the keyboard/project*
+A STM32F103 based numpad with a rotary encoders, and a 128x32 OLED display. 
 
 * Keyboard Maintainer: [QFFS](https://github.com/QFFS)
 * Hardware Supported: [PCB V1.0](https://oshwhub.com/lylyyhb/numkeyboard)
