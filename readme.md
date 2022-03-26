@@ -28,5 +28,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Bootloader
 
+You can find bootloader at bootloader_hex folder, you should flash it to the mcu with stlink or jlink or dap-link etc. 
+
 Enter the bootloader in followe way:
 * **Keycode in layout**: Press the key mapped to `Enter`, then plug into usb.
